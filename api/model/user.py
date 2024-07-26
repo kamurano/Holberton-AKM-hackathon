@@ -25,6 +25,7 @@ class UserModel:
             {table}_sname VARCHAR(30),
             {table}_email VARCHAR(50) NOT NULL UNIQUE,
             {table}_password VARCHAR(256) NOT NULL,
+            {table}_is_active BOOLEAN DEFAULT FALSE,
             {table}_is_admin BOOLEAN DEFAULT FALSE,
             {table}_created DATETIME DEFAULT CURRENT_TIMESTAMP
         )
@@ -61,3 +62,14 @@ class UserModel:
         with lock:
             for x in self.db.execute(executed):
                 return dict(x)
+            
+    def get_user_active_status(self, table, email):
+        executed = f"SELECT `{table}_is_active` FROM {table} WHERE `{table}_email` = '{email}'"
+        with lock:
+            for x in self.db.execute(executed):
+                return dict(x)
+            
+    def activate_email(self, table, email):
+        executed = f"UPDATE {table} SET `{table}_is_active`= TRUE WHERE `{table}_email` = '{email}'"
+        with lock:
+            self.db.execute(executed)

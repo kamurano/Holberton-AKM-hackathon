@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
 from flask_swagger_ui import get_swaggerui_blueprint
+from itsdangerous import URLSafeTimedSerializer
 import smtplib
 import random
 from email.mime.text import MIMEText
@@ -35,4 +36,4 @@ app.register_blueprint(auth_controller)
 def home():
     return jsonify({"message": "Hello, World!"})
 
-app.run(host="0.0.0.0", port=5000, debug=True)
+app.run(port=5000, debug=True)

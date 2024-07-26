@@ -24,3 +24,13 @@ class UserService:
         if len(password) > 50:
             return False, {"message": "Password is too long"}
         return True, None
+    
+    @staticmethod
+    def validate_login(email, password):
+        if not email:
+            return False, {"message": "Missing email"}
+        if not password:
+            return False, {"message": "Missing password"}
+        if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
+            return False, {"message": "Invalid email address"}
+        return True, None
