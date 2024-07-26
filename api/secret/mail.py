@@ -1,0 +1,6 @@
+smtp = "smtp.yandex.ru"
+mail_port = "465"
+mail_username = "kam.urano@yandex.ru"
+mail_password = "aozuyqkfypecpbbv"
+mail_from = "kam.urano@yandex.ru"
+mail_to = "kamrannn.mk@gmail.com"

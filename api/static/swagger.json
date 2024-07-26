@@ -1,0 +1,193 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "Access API",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/": {
+      "get": {
+        "description": "Returns message showing app is up",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "JWT token for authentication. Format: Bearer {token}",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
+            },
+            "headers": {
+              "X-Rate-Limit": {
+                "type": "integer",
+                "description": "The number of allowed requests in the current period"
+              },
+              "X-Expires-After": {
+                "type": "string",
+                "description": "The date when the current rate limit window resets in UTC format"
+              }
+            }
+          }
+        }
+      }
+    },
+      "/signup": {
+        "post": {
+          "description": "Grants access to an user",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          
+          "parameters": [
+            {
+              "name": "access data",
+              "in": "body",
+              "description": "JSON data for the api",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/signup_data"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+            "description": "Successful signup",
+            "schema": {
+              "$ref": "#/definitions/signup_response"
+            }
+          },
+            "400": {
+            "description": "Signup error",
+            "schema": {
+              "$ref": "#/definitions/signup_error"
+            }
+          }
+          }
+        }
+      },
+
+      "/login": {
+        "post": {
+          "description": "login an user",
+          "consumes": [
+            "application/json"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          
+          "parameters": [
+            {
+              "name": "access data",
+              "in": "body",
+              "description": "JSON data for the api",
+              "required": true,
+              "schema": {
+                "$ref": "#/definitions/login_data"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+            "description": "Successful signup",
+            "schema": {
+              "$ref": "#/definitions/login_response"
+            }
+          },
+            "400": {
+            "description": "Signup error",
+            "schema": {
+              "$ref": "#/definitions/login_error"
+            }
+          }
+          }
+        }
+      }
+
+    },
+    "definitions": {
+      "signup_data": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "fname": {
+            "type": "string"
+          },
+          "sname": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "password_confirmation": {
+            "type": "string"
+          }
+        }
+      },
+        "signup_response": {
+            "type": "object",
+            "properties": {
+            "message": {
+                "type": "string"
+            }
+            }
+        },
+        "signup_error": {
+            "type": "object",
+            "properties": {
+            "message": {
+                "type": "string"
+            }
+            }
+        },
+        "login_data": {
+            "type": "object",
+            "properties": {
+            "email": {
+                "type": "string"
+            },
+            "password": {
+                "type": "string"
+            }
+            }
+        },
+        "login_response": {
+            "type": "object",
+            "properties": {
+            "message": {
+                "type": "string"
+            },
+            "access_token": {
+                "type": "string"
+            }
+            }
+        },
+        "login_error": {
+            "type": "object",
+            "properties": {
+            "message": {
+                "type": "string"
+            }
+            }
+        }
+    }
+  }
