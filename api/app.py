@@ -7,6 +7,7 @@ import random
 from email.mime.text import MIMEText
 
 from controller.auth import auth_controller
+from controller.user import user_controller
 from secret.jwt import jwt_secret
 
 app = Flask(__name__)
@@ -29,6 +30,7 @@ swagger_ui_blueprint = get_swaggerui_blueprint(
 
 app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
 app.register_blueprint(auth_controller)
+app.register_blueprint(user_controller)
 
 
 @app.route('/')

@@ -37,7 +37,6 @@ def signup():
     
     # Generate verification token
     token = serializer.dumps(email, salt='email-confirm-salt')
-
     # Send verification email
     send_verification_email(email, token)
     
@@ -60,10 +59,14 @@ def login():
     
     valid, message = user_repository.get_user_active_status(email)
     if not valid:
+        # Generate verification token
+        token = serializer.dumps(email, salt='email-confirm-salt')
+        # Send verification email
+        send_verification_email(email, token)
         return jsonify(message), 400
     
     if user and check_password_hash(user['users_password'], password):
-        access_token = create_access_token(identity={'email': email}, expires_delta=timedelta(days=7))
+        access_token = create_access_token(identity={"id": user["users_id"], 'email': email, "is_admin": user["users_is_admin"]}, expires_delta=timedelta(days=7))
         return jsonify({"message": "Logged in successfully", "access_token": access_token}), 200
     return jsonify({"message": "Invalid email or password"}), 400   
 
