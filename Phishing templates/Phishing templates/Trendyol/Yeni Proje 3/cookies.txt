@@ -1,0 +1,22 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.trendyol.com	TRUE	/	FALSE	1999999999	hvtb	1
+.trendyol.com	TRUE	/	FALSE	1999999999	AZ_ELIGIBLE	true
+.trendyol.com	TRUE	/	FALSE	1999999999	VisitCount	1
+.trendyol.com	TRUE	/	FALSE	1999999999	SearchMode	1
+.trendyol.com	TRUE	/	FALSE	1999999999	platform	web
+.trendyol.com	TRUE	/	FALSE	1999999999	FirstSession	0
+www.trendyol.com	TRUE	/	FALSE	1999999999	__cflb	0H28vSBxxmVRpbspxXRaYmzqiTh4nNQuSMF1MDn4J9A
+www.trendyol.com	TRUE	/	FALSE	1999999999	COOKIE_TY.IsUserAgentMobileOrTablet	false
+.trendyol.com	TRUE	/	FALSE	1999999999	COOKIE_TY.Anonym	tx=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cm46dHJlbmR5b2w6YW5vbmlkIjoiNTZmNzhjNDA0YjkxMTFlZmExZGZjMjdhZjZjYjRkMDYiLCJyb2xlIjoiYW5vbiIsImF0d3J0bWsiOiI1NmY3OGMzZC00YjkxLTExZWYtYTFkZi1jMjdhZjZjYjRkMDYiLCJhcHBOYW1lIjoidHkiLCJhdWQiOiJzYkF5ell0WCtqaGVMNGlmVld5NXR5TU9MUEpXQnJrYSIsImV4cCI6MTg3OTgxNTMwNywiaXNzIjoiYXV0aC50cmVuZHlvbC5jb20iLCJuYmYiOjE3MjIwMjczMDd9.aNmH9_nzbX1ZyLoPdURDjku0jMog-C6VtgWw8c-Fp1s
+.trendyol.com	TRUE	/	FALSE	1999999999	anonUserId	993d7ea0-4b91-11ef-9f62-ed633dc920bf
+.trendyol.com	TRUE	/	FALSE	1999999999	functionalConsent	false
+.trendyol.com	TRUE	/	FALSE	1999999999	performanceConsent	false
+.trendyol.com	TRUE	/	FALSE	1999999999	targetingConsent	false
+.trendyol.com	TRUE	/	FALSE	1999999999	__cfruid	60c8fb0d4c38a94c709f70f2b26ed5424c0953cb-1719036163
+cdn.dsmcdn.com	TRUE	/	FALSE	1999999999	__cflb	02DiuH75CihXb4qj3DKJQFNaeb7wo6tiCJCXMvMb6aTEt
+cdn.dsmcdn.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+.trendyol.com	TRUE	/	FALSE	1999999999	__cf_bm	oJh5LmHIgVaFPLkYlB3ldoi5xF_0A1vPQT1dL_iDKBA-1722027674-1.0.1.1-npYLgx4RVtufK65F.ekRl5Chh6PswPfVlsVL5FrP_IwrcPjvng4detQV9Fbz8OgKc06pFTlVrQ5gx8dBCeILBw
+.trendyol.com	TRUE	/	FALSE	1999999999	_cfuvid	69I_zPdYnrO9LXjWMhrXJQ2vfpq4gTvPu2qiNy2Mpcc-1722027674394-0.0.1.1-604800000
+www.trendyol.com	TRUE	/	FALSE	1999999999	SameSite	None
+

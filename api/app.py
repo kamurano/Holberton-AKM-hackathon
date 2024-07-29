@@ -8,6 +8,8 @@ from email.mime.text import MIMEText
 
 from controller.auth import auth_controller
 from controller.user import user_controller
+from controller.phishing import phishing_controller
+from controller.quiz import quiz_controller
 from secret.jwt import jwt_secret
 
 app = Flask(__name__)
@@ -31,6 +33,8 @@ swagger_ui_blueprint = get_swaggerui_blueprint(
 app.register_blueprint(swagger_ui_blueprint, url_prefix=SWAGGER_URL)
 app.register_blueprint(auth_controller)
 app.register_blueprint(user_controller)
+app.register_blueprint(phishing_controller)
+app.register_blueprint(quiz_controller)
 
 
 @app.route('/')
@@ -38,4 +42,4 @@ app.register_blueprint(user_controller)
 def home():
     return jsonify({"message": "Hello, World!"})
 
-app.run(port=5000, debug=True)
+app.run(host="0.0.0.0" ,port=5000, debug=True)

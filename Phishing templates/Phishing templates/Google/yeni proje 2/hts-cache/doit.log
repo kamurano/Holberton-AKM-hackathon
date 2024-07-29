@@ -1,0 +1,8 @@
+-qwC2%P%s%u%I0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "tr, en, *" https://accounts.google.com/v3/signin/identifier?hl=en-gb&ifkv=AdF4I76gKwQMFlKUJz8q_FJwPrILDLrX1doIe5Ezk8EDVJGTzfCw-8uc2VTn9RSEBLwqd8uUnkRlXA&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1074387506%3A1722026749875113&ddm=0 -O1 "C:\Users\ASUS VivoBook\Desktop\Yeni Proje 2\yeni proje 2" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+File generated automatically on Sat, 27 Jul 2024 00:48:24, do NOT edit
+
+To update a mirror, just launch httrack without any parameters
+The existing cache will be used (and modified)
+To have other options, retype all parameters and launch HTTrack
+To continue an interrupted mirror, just launch httrack without any parameters
+

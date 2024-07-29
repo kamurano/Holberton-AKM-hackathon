@@ -1,0 +1,3 @@
+"use strict";(this.webpackChunkweb_sfx=this.webpackChunkweb_sfx||[]).push([[27800,5419],{27800:(u,a,t)=>{t.d(a,{A:()=>n});var s=t(43145);function n(e,_){if(e){if(typeof e=="string")return(0,s.A)(e,_);var r={}.toString.call(e).slice(8,-1);return r==="Object"&&e.constructor&&(r=e.constructor.name),r==="Map"||r==="Set"?Array.from(e):r==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?(0,s.A)(e,_):void 0}}}}]);
+
+//# sourceMappingURL=n.27800.7c695da1-0.js.map

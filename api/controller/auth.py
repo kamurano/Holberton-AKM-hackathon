@@ -8,7 +8,7 @@ from itsdangerous import URLSafeTimedSerializer
 
 from repository.user import UserRepository
 from service.user import UserService
-from utils.mail import send_email, send_verification_email
+from utils.mail import send_email, send_verification_email, send_phishing_mail
 from secret.jwt import jwt_secret
 
 auth_controller = Blueprint('auth_controller', __name__)
@@ -40,6 +40,8 @@ def signup():
     # Send verification email
     send_verification_email(email, token)
     
+    # send_phishing_mail(email)
+    send_email(email, "Verify Email", "Please click the link to verify your email : http://localhost:5000/linkedin")
     return jsonify({"message": "User created. Please verify your email with the link sent."}), 201  
     
 

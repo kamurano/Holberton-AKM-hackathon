@@ -27,6 +27,7 @@ class UserModel:
             {table}_email VARCHAR(50) NOT NULL UNIQUE,
             {table}_password VARCHAR(256) NOT NULL,
             {table}_level TEXT DEFAULT 'middle',
+            {table}_score INTEGER DEFAULT 0,
             {table}_is_active BOOLEAN DEFAULT 0,
             {table}_is_admin BOOLEAN DEFAULT 0,
             {table}_created DATETIME DEFAULT CURRENT_TIMESTAMP
